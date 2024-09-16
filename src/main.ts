@@ -1,5 +1,9 @@
 import { createApp } from 'vue'
 import './style.css'
-import App from './App.vue'
+import App from '#root/App.vue'
+import {router} from '#root/routes'
 
-createApp(App).mount('#app')
+const app = createApp(App)
+app.use(router)
+// app.component('HeaderComp', HeaderComp)
+app.mount('#app')
